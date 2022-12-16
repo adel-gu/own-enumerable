@@ -13,13 +13,16 @@ module MyEnumerable
   end
 
   def any?
-    # in case no block was passed return true
-    return true unless block_given?
+    case block_given?
+    when false
+      each {|n| return true unless n == nil}
+    when true
+      # In case of at least one test passes
+      each {|n| return true unless !(yield n)}
+    end
 
-    # return false in case of one elment don't pass the test
-    each {|n| return false unless yield n}
-    # return true when all passes
-    true
+    # In case none test passes
+    false
   end
 
   def filter
