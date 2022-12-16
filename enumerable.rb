@@ -15,6 +15,7 @@ module MyEnumerable
   def any?
     case block_given?
     when false
+      # return true if atleast one element is not nil
       each {|n| return true unless n == nil}
     when true
       # In case of at least one test passes
@@ -26,5 +27,16 @@ module MyEnumerable
   end
 
   def filter
+    case block_given?
+    when false
+      return to_enum(*each)
+    when true
+      filter_arr = []
+      # In case of at least one test passes
+      each {|n| filter_arr.push(n) unless !(yield n)}
+      # return filter_arr
+      return filter_arr
+    end
   end
+
 end
