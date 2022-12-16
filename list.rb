@@ -1,4 +1,4 @@
-require "./enumerable"
+require './enumerable'
 
 class MyList
   include MyEnumerable
@@ -10,9 +10,9 @@ class MyList
 
   # yield each element in the list
   def each
-    return to_enum([]) unless block_given?
+    return to_enum unless block_given?
 
-    for i in 0..(@list.length - 1) do
+    (0..(@list.length - 1)).each do |i|
       yield @list[i]
     end
   end
