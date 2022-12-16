@@ -10,7 +10,7 @@ class MyList
 
   # yield each element in the list
   def each
-    return [] unless block_given?
+    return to_enum([]) unless block_given?
 
     for i in 0..(@list.length - 1) do
       yield @list[i]
