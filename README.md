@@ -54,7 +54,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Own Enumerable <a name="about-project"></a>
 
-The main purpose of this repo is to practice using modules inside classes, so for this project I created a class called `Mylist` that will hold a collection if items ("array of numbers"), and a `MyEnumerable` module that will contain the enemurable methods to manipulate the collections of `MyClass` list, thus methods are:
+The main purpose of this repo is to practice using modules inside classes, so for this project, I created a class called `Mylist` that will hold a collection of items ("array of numbers"), and a `MyEnumerable` module that will contain the enumerable methods to manipulate the collections of `MyClass` list, thus methods are:
 
 - `all?`
 - `any?`
@@ -108,7 +108,7 @@ Install this project with:
 
 ### Usage
 
-To try the project, you can add any line of code to test out the Enumerable methods created, ensure to add your line of code at the buttom in `list.rb` file.
+To try the project, you can add any line of code to test out the Enumerable methods created, ensure to add your line of code at the bottom in `list.rb` file.
 
 Example code:
 
